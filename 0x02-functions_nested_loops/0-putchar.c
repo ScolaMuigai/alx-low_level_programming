@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _putchar prints the name _putchar
+* main prints the _putchar
 */
 
 int main(void)
