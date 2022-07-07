@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* The _isupper checks if the character is uppercase
+* _isupper - checks if the character is uppercase
 * @c: character to be checked
 * Retun; 1 if true, o if false
 */
