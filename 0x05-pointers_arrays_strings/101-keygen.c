@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - program that generates random valid
@@ -6,19 +8,28 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-  int n;
-  int a[5];
-  int *p;
+	int pass[100];
+	int i, sum, n;
 
-  a[2] = 1024;
-  p = &n;
+	sum = 0;	
 
+	srand(time(NULL));
 
-  *(p + 5) = 98;
-  /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
-  return (0);
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
+	return (0);
 }
